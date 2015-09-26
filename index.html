@@ -3,17 +3,23 @@
 		<title>Evansville CoderDojo</title>
 		<script src="/javascript/jquery/jquery-2.1.4.min.js"></script>
 		<script>
-			$(function() {
-				alert("Hello!");
-				$("#spanText").html("test");
-			});
+			function add(){
+				var sum = 0;
+				sum = $('#addend1').val() + $('#addend2').val();
+				$('#sum').val(sum);
+			}
 		</script>
 	</head>
 	<body>
-		This is the test website
+		<input id="addend1" type="text" value="" />
 		<br/>
-		New Line
+		+
 		<br/>
-		<span id="spanText">BlahBlahBlah</span>
+		<input id="addend2" type="text" value="" />
+		=
+		<br/>
+		<input id="sum" type="text" value="" readonly="readonly" />
+		<br/>
+		<button onClick="add()">Add</button>
 	</body>
 </html>
